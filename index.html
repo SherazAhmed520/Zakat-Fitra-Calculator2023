@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAKAT & FITRA COUNT</title>
+    <style>
+        * {
+            background-color: lightcyan;
+        }
+
+        .intro {
+            margin: auto;
+            text-align: center;
+        }
+        button{
+            color: white;
+            border-radius: 15px;
+            background-color: black;
+            border-color: azure;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: medium;
+            height: 40px;
+        }
+        button:hover{
+            background-color: aliceblue;
+            color: black;
+            border-radius: 25px;
+            border-color: chartreuse;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="intro">
+        <h1 style="margin: auto; text-align: center;">Welcome in our Zakat & Fitrah Calculator website</h1>
+        <h3> 1 Tola gold amount is 207000 Rs in today 03/04/2023 </h3>
+        <h3> 1 Tola silver(chandi) amount is 2521 Rs in today 03/04/2023 </h3>
+        <h4> Zakat of 7.5 Tola Gold will be 2.5% </h4>
+        <h4> Zakat of 52.5 Tola silver(Chandi) will be 2.5% </h4>
+        <h4> Fitra For 1 person of wheat = 320Rs, Jav = 800Rs, Date = 2800Rs,<br> Ajwa Date = 10400Rs, Kishmish = 6400Rs.</h4>
+        <button  onclick="calc()"> Click to Calculate Zakat & Fitra</button>
+    </div>
+</body>
+    <script>
+        function calc(){
+        let c = parseInt(prompt(" Welcome to Zakat & Fitrah calculator Web... \n What you can Calculate \n 1) Zakat  2) Fitrah "));
+
+        // function calc(){
+        // return parseInt(prompt(" Welcome to Zakat & Fitrah calculator Web... \n What you can Calculate \n 1) Zakat  2) Fitrah "));
+
+        // }
+        if (c == 1) {
+
+            let amount = prompt("Please Enter Your Total amount...");
+            let zakat = (amount * 2.5) / 100;
+            alert("Your Zakat Amount is " + zakat + " Rs.");
+            // document.write("Your Zakat Amount is " + zakat + " Rs.");
+
+        }
+        else if (c == 2) {
+            let opt = parseInt(prompt(" Please Enter \n What Type Of Fitra Do You Want to Give? \n 1) Wheat(Gandum)  2)Jav  3) Date(Khajoor)  4)Ajwa Khajoor  5)Kishmish "));
+
+            switch (opt) {
+                case 1:
+                    let wh = prompt("Let us know! How many family members you are? ");   //For Wheat
+                    let totalwh = wh * 320;
+                    alert("Thanks For using this web..\nYour Amount of Fitra is " + totalwh + " Rs" + " of wheat.")
+                    // document.write("Thanks For using this web..\nYour Amount of Fitra is " + totalwh + " Rs" + " of wheat.")
+                    break;
+                case 2:
+                    let jav = prompt("Let us know! How many family members you are? ");   //For Jav
+                    let totaljav = jav * 800;
+                    alert("Thanks For using this web..\nYour Amount of Fitra is " + totaljav + " Rs" + " of Jav.")
+                    // document.write("Thanks For using this web..\nYour Amount of Fitra is " + totaljav + " Rs" + " of Jav.")
+                    break;
+                case 3:
+                    let dates = prompt("Let us know! How many family members you are? ");   //For Date
+                    let totaldate = dates * 2800;
+                    alert("Thanks For using this web..\nYour Amount of Fitra is " + totaldate + " Rs" + " of Date(khajoor).")
+                    // document.write("Thanks For using this web..\nYour Amount of Fitra is " + totaldate + " Rs" + " of Date(khajoor).")
+                    break;
+                case 4:
+                    let ajwadate = prompt("Let us know! How many family members you are? ");   //For Ajwa
+                    let totalajwa = ajwadate * 10400;
+                    alert("Thanks For using this web..\nYour Amount of Fitra is " + totalajwa + " Rs" + " of Ajwa Khajoor.")
+                    // document.write("Thanks For using this web..\nYour Amount of Fitra is " + totalajwa + " Rs" + " of Ajwa Khajoor.")
+                    break;
+                case 5:
+                    let kishmish = prompt("Let us know! How many family members you are? ");   //For Kishmish
+                    let totalakishmish = kishmish * 6400;
+                    alert("Thanks For using this web..\nYour Amount of Fitra is " + totalakishmish + " Rs" + " of Kishmish.")
+                    // document.write("Thanks For using this web..\nYour Amount of Fitra is " + totalakishmish + " Rs" + " of Kishmish.")
+                    break;
+
+                default:
+                    alert("Please Select valid option!!!");
+                    break;
+            }
+        }
+        else {
+            alert("Please Select valid option!!!");
+        }
+    }
+    </script>
+
+</html>
